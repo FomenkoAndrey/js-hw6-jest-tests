@@ -5,38 +5,40 @@ console.log('#6. JavaScript homework example file')
  * Задача: Калькулятор калорійності продуктів через клас.
  * Завдання: Розробити JavaScript модуль за допомогою класу, який використовує Map для зберігання та управління даними про калорійність продуктів.
  * Модуль повинен дозволяти додавати нові продукти з їх калорійністю, отримувати калорійність продукту за його назвою та видаляти продукти з колекції.
+ * Якщо продукт не знайдено, повинен бути повернений рядок 'Product not found'.
  * Перевіряється наявність методів addProduct, getProductCalories, removeProduct.
  * Перевіряється, що CalorieCalculator створений за допомогою class.
+ * Перевіряється використання new Map().
  */
 
 class CalorieCalculator {
   constructor() {
-    this.products = new Map()
+    // code here
   }
 
-  addProduct(productName, calories) {
-    this.products.set(productName, calories)
+  addProduct() {
+    // code here
   }
 
   getProductCalories(productName) {
-    return this.products.get(productName) || 'Product not found'
+    // code here
   }
 
   removeProduct(productName) {
-    return this.products.delete(productName)
+    // code here
   }
 }
 
 // Демонстрація використання
-const calorieCalculator = new CalorieCalculator()
-calorieCalculator.addProduct('Apple', 52)
-calorieCalculator.addProduct('Banana', 89)
-
-console.log(calorieCalculator.getProductCalories('Apple')) // 52
-console.log(calorieCalculator.getProductCalories('Banana')) // 89
-
-calorieCalculator.removeProduct('Apple')
-console.log(calorieCalculator.getProductCalories('Apple')) // Product not found
+// const calorieCalculator = new CalorieCalculator()
+// calorieCalculator.addProduct('Apple', 52)
+// calorieCalculator.addProduct('Banana', 89)
+//
+// console.log(calorieCalculator.getProductCalories('Apple')) // 52
+// console.log(calorieCalculator.getProductCalories('Banana')) // 89
+//
+// calorieCalculator.removeProduct('Apple')
+// console.log(calorieCalculator.getProductCalories('Apple')) // Product not found
 
 /*
  * #2
@@ -45,34 +47,35 @@ console.log(calorieCalculator.getProductCalories('Apple')) // Product not found
  * Модуль має дозволяти додавати імена користувачів та перевіряти, чи вже існує ім'я в наборі, а також повертати кількість унікальних імен у наборі.
  * Перевіряється наявність методів addUser, exists, count.
  * Перевіряється, що UniqueUsernames створений за допомогою class.
+ * Перевіряється використання new Set().
  */
 
 class UniqueUsernames {
   constructor() {
-    this.usernames = new Set()
+    // code here
   }
 
   addUser(username) {
-    this.usernames.add(username)
+    // code here
   }
 
   exists(username) {
-    return this.usernames.has(username)
+    // code here
   }
 
   count() {
-    return this.usernames.size
+    // code here
   }
 }
 
 // Демонстрація використання
-const uniqueUsernames = new UniqueUsernames()
-uniqueUsernames.addUser('john_doe')
-uniqueUsernames.addUser('jane_doe')
-uniqueUsernames.addUser('john_doe') // Ця дія не змінить набір, оскільки 'john_doe' вже існує
-
-console.log(`Існує 'john_doe': ${uniqueUsernames.exists('john_doe')}`) // true
-console.log(`Кількість унікальних імен: ${uniqueUsernames.count()}`) // 2
+// const uniqueUsernames = new UniqueUsernames()
+// uniqueUsernames.addUser('john_doe')
+// uniqueUsernames.addUser('jane_doe')
+// uniqueUsernames.addUser('john_doe') // Ця дія не змінить набір, оскільки 'john_doe' вже існує
+//
+// console.log(`Існує 'john_doe': ${uniqueUsernames.exists('john_doe')}`) // true
+// console.log(`Кількість унікальних імен: ${uniqueUsernames.count()}`) // 2
 
 /*
  * #3
@@ -84,28 +87,26 @@ console.log(`Кількість унікальних імен: ${uniqueUsernames
  */
 
 function DateCalculator(initialDate) {
-  this.currentDate = new Date(initialDate)
-
   this.addDays = function (days) {
-    this.currentDate.setDate(this.currentDate.getDate() + days)
+    // code here
   }
 
   this.subtractDays = function (days) {
-    this.currentDate.setDate(this.currentDate.getDate() - days)
+    // code here
   }
 
   this.getResult = function () {
-    return this.currentDate.toISOString().split('T')[0]
+    // code here
   }
 }
 
 // Демонстрація використання
-const dateCalculator = new DateCalculator('2023-01-01')
-dateCalculator.addDays(5)
-console.log(dateCalculator.getResult()) // Виводить нову дату після додавання днів
-
-dateCalculator.subtractDays(3)
-console.log(dateCalculator.getResult()) // Виводить нову дату після віднімання днів
+// const dateCalculator = new DateCalculator('2023-01-01')
+// dateCalculator.addDays(5)
+// console.log(dateCalculator.getResult()) // Виводить нову дату після додавання днів
+//
+// dateCalculator.subtractDays(3)
+// console.log(dateCalculator.getResult()) // Виводить нову дату після віднімання днів
 
 // Експорт для використання в тестах
 export { CalorieCalculator, UniqueUsernames, DateCalculator }
