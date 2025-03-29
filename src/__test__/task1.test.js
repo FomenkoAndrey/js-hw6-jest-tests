@@ -1,5 +1,6 @@
 import { CalorieCalculator } from '../main.js'
-import { code } from './prepareTestEnvironment'
+import { code } from './prepareTestEnvironment.js'
+import { describe, test, expect, beforeEach } from 'vitest'
 
 describe('Code tests for CalorieCalculator', () => {
   let calculator
