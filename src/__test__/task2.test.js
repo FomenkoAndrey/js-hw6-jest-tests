@@ -1,5 +1,6 @@
 import { UniqueUsernames } from '../main'
-import { code } from './prepareTestEnvironment'
+import { code } from './prepareTestEnvironment.js'
+import { describe, test, expect, beforeEach } from 'vitest'
 
 describe('Code tests for UniqueUsernames', () => {
   let usernames
